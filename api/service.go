@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 	"sync"
 	"time"
 
@@ -111,6 +112,7 @@ func (s *service) Stats() ([]stat, error) {
 			return nil, err
 		}
 
+		fmt.Println(result)
 		statItem.Count = result[i].(int)
 	}
 
