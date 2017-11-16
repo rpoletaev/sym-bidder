@@ -20,7 +20,7 @@ const (
 // и текущем номере серии
 type ifaItem struct {
 	lastUpdate      time.Time
-	curentSeriesNum int
+	curentSeriesNum int64
 }
 
 type service struct {
@@ -44,7 +44,7 @@ func CreateService(cfg *Config) *service {
 }
 
 // обрабатывает входные данные
-func (s *service) Process(key, stat string) (pos int, err error) {
+func (s *service) Process(key, stat string) (pos int64, err error) {
 	go s.saveStat(stat)
 
 	s.mu.Lock()
@@ -76,7 +76,7 @@ func (s *service) Process(key, stat string) (pos int, err error) {
 		return 0, err
 	}
 
-	return res[1].(int), err
+	return res[1].(int64), err
 }
 
 // saveStat сохранить в редис статистику
