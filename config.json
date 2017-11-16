@@ -1,0 +1,8 @@
+{
+    "service_port": "8080",
+    "redis_host": "127.0.0.1",
+    "redis_port": "6379",
+    "max_iddle_connections": 100,
+    "ifa_counter_ttl": 600,
+    "ifa_series_interval": 5
+}
