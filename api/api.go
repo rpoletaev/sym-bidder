@@ -102,7 +102,7 @@ func (api *Api) statsHandler(w http.ResponseWriter, r *http.Request) {
 
 // parseInput получение необходимых значений из входного json
 func parseInput(json string) (ifa, statKey string) {
-	res := gjson.GetMany(json, "device.ifa", "geo.country", "app.name", "device.os")
+	res := gjson.GetMany(json, "device.ifa", "device.geo.country", "app.name", "device.os")
 	ifa = res[0].String()
 
 	buf := bytes.NewBufferString("{")
