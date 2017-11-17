@@ -2,7 +2,6 @@ package api
 
 import (
 	"encoding/json"
-	"fmt"
 	"strconv"
 	"sync"
 	"time"
@@ -135,7 +134,7 @@ func (s *service) Stats() ([]Stat, error) {
 		}
 
 		statItem.Count, _ = strconv.ParseInt(string(result[i].([]byte)), 10, 64)
-		fmt.Println(statItem)
+		// fmt.Println(statItem)
 	}
 
 	return stats, nil
