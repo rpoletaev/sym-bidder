@@ -125,9 +125,6 @@ func (s *service) Stats() ([]Stat, error) {
 	stats := make([]Stat, resLength/2, resLength/2)
 	statsIndex := 0
 
-	for i, val := range result {
-		fmt.Printf("%d %v\n", i, val)
-	}
 	for i := 1; i < resLength; i += 2 {
 
 		rawKey := result[i-1].([]byte)
@@ -138,6 +135,7 @@ func (s *service) Stats() ([]Stat, error) {
 		}
 
 		statItem.Count, _ = strconv.ParseInt(string(result[i].([]byte)), 10, 64)
+		fmt.Println(statItem)
 	}
 
 	return stats, nil
