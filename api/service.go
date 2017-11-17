@@ -27,7 +27,7 @@ type ifaItem struct {
 type service struct {
 	*Config
 	mu          sync.Mutex
-	lastUpdates map[string]ifaItem
+	lastUpdates map[string]*ifaItem
 	pool        *redis.Pool
 }
 
@@ -37,7 +37,7 @@ func CreateService(cfg *Config) *service {
 
 	return &service{
 		Config:      cfg,
-		lastUpdates: map[string]ifaItem{},
+		lastUpdates: map[string]*ifaItem{},
 		pool: redis.NewPool(func() (redis.Conn, error) {
 			return redis.Dial("tcp", address)
 		}, cfg.MaxIddleCons),
@@ -51,9 +51,24 @@ func (s *service) Process(key, stat string) (pos int64, err error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	item := s.lastUpdates[key]
+	now := time.Now()
+
+	// если ключа еще не было, то установим и вернем 0
+	item, ok := s.lastUpdates[key]
+	if !ok {
+		s.lastUpdates[key] = &ifaItem{
+			lastUpdate:      now,
+			curentSeriesNum: 0,
+		}
+
+		return 0, nil
+	}
 
 	afterLastUpdate := time.Since(item.lastUpdate)
+	fmt.Println(afterLastUpdate)
+
+	// если ключ пришел в течение секунды со времени предыдущего обновления
+	// то прочто вернем сохраненный номер серии
 	if afterLastUpdate <= 1*time.Second {
 		return item.curentSeriesNum, nil
 	}
@@ -63,11 +78,15 @@ func (s *service) Process(key, stat string) (pos int64, err error) {
 
 	ifaKey := "ifa" + key
 
+	// если время с последнего обновления больше секунды, но меньше интервала установки новой сессии
+	// обновим ttl в redis для данного ключа, обновим время последнего обновления и вернем текущий номер серии
 	if afterLastUpdate < s.IFASeriesInterval*time.Second {
 		_, err = con.Do(EXPIRE, ifaKey, s.IFACounterTTL)
+		item.lastUpdate = now
 		return item.curentSeriesNum, err
 	}
 
+	// иначе обновим ttl, обновим счетчик, обновим время последнего апдейта
 	con.Send(MULTI)
 	con.Send(EXPIRE, ifaKey, s.IFACounterTTL)
 	con.Send(INCR, ifaKey)
@@ -77,7 +96,10 @@ func (s *service) Process(key, stat string) (pos int64, err error) {
 		return 0, err
 	}
 
-	return res[1].(int64), err
+	item.curentSeriesNum = res[1].(int64)
+	item.lastUpdate = now
+
+	return item.curentSeriesNum, err
 }
 
 // saveStat сохранить в редис статистику

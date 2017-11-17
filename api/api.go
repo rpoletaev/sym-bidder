@@ -108,7 +108,7 @@ func parseInput(json string) (ifa, statKey string) {
 	buf := bytes.NewBufferString("{")
 	buf.WriteString(`"country":"` + res[1].String() + `",`)
 	buf.WriteString(`"app":"` + res[2].String() + `",`)
-	buf.WriteString(`"platform":"` + res[1].String() + `"}`)
+	buf.WriteString(`"platform":"` + res[3].String() + `"}`)
 	statKey = buf.String()
 
 	return
