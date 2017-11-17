@@ -136,6 +136,7 @@ func (s *service) Stats() ([]Stat, error) {
 			return nil, err
 		}
 
+		fmt.Printf("%d %v\n", i, result[i])
 		// statItem.Count, _ = result[i]
 	}
 
