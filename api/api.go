@@ -34,7 +34,7 @@ type Config struct {
 }
 
 // stat структура для описания одной строки старистики
-type stat struct {
+type Stat struct {
 	Country  string `json:"country"`
 	App      string `json:"app"`
 	Platform string `json:"platform"`

@@ -1,7 +1,6 @@
 package api
 
 import (
-	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"sync"
@@ -112,7 +111,7 @@ func (s *service) saveStat(statKey string) {
 
 // Stats получает статистику из redis и возвращает, при успешном получении,
 // иначе ошибка
-func (s *service) Stats() ([]stat, error) {
+func (s *service) Stats() ([]Stat, error) {
 	con := s.pool.Get()
 	defer con.Close()
 
@@ -122,9 +121,12 @@ func (s *service) Stats() ([]stat, error) {
 	}
 
 	resLength := len(result)
-	stats := make([]stat, resLength/2, resLength/2)
+	stats := make([]Stat, resLength/2, resLength/2)
 	statsIndex := 0
 
+	for i, val := range result {
+		fmt.Printf("%d %v\n", i, val)
+	}
 	for i := 1; i < resLength; i += 2 {
 
 		rawKey := result[i-1].([]byte)
@@ -134,8 +136,7 @@ func (s *service) Stats() ([]stat, error) {
 			return nil, err
 		}
 
-		statItem.Count, _ = binary.Varint(result[i].([]byte))
-		fmt.Println(statItem)
+		// statItem.Count, _ = result[i]
 	}
 
 	return stats, nil
