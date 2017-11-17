@@ -134,8 +134,8 @@ func (s *service) Stats() ([]stat, error) {
 			return nil, err
 		}
 
-		fmt.Println(result)
 		statItem.Count, _ = binary.Varint(result[i].([]byte))
+		fmt.Println(statItem)
 	}
 
 	return stats, nil
