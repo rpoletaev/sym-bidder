@@ -137,7 +137,7 @@ func (s *service) Stats() ([]Stat, error) {
 			return nil, err
 		}
 
-		statItem.Count, _ = strconv.ParseInt(result[i].(string), 10, 64)
+		statItem.Count, _ = strconv.ParseInt(string(result[i].([]byte)), 10, 64)
 	}
 
 	return stats, nil
