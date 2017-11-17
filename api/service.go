@@ -127,7 +127,7 @@ func (s *service) Stats() ([]Stat, error) {
 	for i := 1; i < resLength; i += 2 {
 
 		rawKey := result[i-1].([]byte)
-		statItem := stats[statsIndex]
+		statItem := &stats[statsIndex]
 
 		if err := json.Unmarshal(rawKey, &statItem); err != nil {
 			return nil, err

@@ -91,8 +91,6 @@ func (api *Api) inputHandler(w http.ResponseWriter, r *http.Request) {
 func (api *Api) statsHandler(w http.ResponseWriter, r *http.Request) {
 
 	stats, err := api.Stats()
-	bts, err := json.Marshal(stats)
-	fmt.Println(string(bts))
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
