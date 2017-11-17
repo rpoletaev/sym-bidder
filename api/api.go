@@ -38,7 +38,7 @@ type stat struct {
 	Country  string `json:"country"`
 	App      string `json:"app"`
 	Platform string `json:"platform"`
-	Count    int    `json:"count"`
+	Count    int64  `json:"count"`
 }
 
 type Api struct {

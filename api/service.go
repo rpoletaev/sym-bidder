@@ -1,6 +1,7 @@
 package api
 
 import (
+	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"sync"
@@ -65,7 +66,6 @@ func (s *service) Process(key, stat string) (pos int64, err error) {
 	}
 
 	afterLastUpdate := time.Since(item.lastUpdate)
-	fmt.Println(afterLastUpdate)
 
 	// если ключ пришел в течение секунды со времени предыдущего обновления
 	// то прочто вернем сохраненный номер серии
@@ -135,7 +135,7 @@ func (s *service) Stats() ([]stat, error) {
 		}
 
 		fmt.Println(result)
-		statItem.Count = result[i].(int)
+		statItem.Count, _ = binary.Varint(result[i].([]byte))
 	}
 
 	return stats, nil
