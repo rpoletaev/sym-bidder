@@ -2,44 +2,10 @@ version: '2'
 services:
   redis:
     image: redis:alpine
-    # ports:
-    # - 6379:6379/tcp
+    ports:
+    - 6379:6379/tcp
   bydder:
     build: .
     ports:
     - "8080:8080"
-    
-    volumes:
-    - ./config.json:/root/config.json:ro
-  # ftptreebuilder:
-  #   image: registry.gitlab.com/garanteka/ftptreebuilder
-  #   volumes:
-  #   - /opt/goszakupki/config/treebuilder.yaml:/root/treebuilder.yaml:ro
-  #   command:
-  #   - ftpTreeBuilder
-  #   - -c
-  #   - treebuilder.yaml
-  # queuereader:
-  #   image: registry.gitlab.com/garanteka/queue_reader
-  #   volumes:
-  #   - /opt/goszakupki/config/queue_reader.yaml:/root/queue_reader.yaml:ro
-  #   - /usr/data/mirror:/mirror
-  #   command:
-  #   - queue_reader
-  #   - -c
-  #   - queue_reader.yaml
-  # ftpworker:
-  #   image: registry.gitlab.com/garanteka/ftpworker
-  #   volumes:
-  #   - /opt/goszakupki/config/ftpworker.yaml:/root/ftpworker.yaml:ro
-  #   - /usr/data/mirror:/mirror
-  #   command:
-  #   - ftpworker
-  #   - -c
-  #   - ftpworker.yaml
-  # mongo:
-  #   image: registry.gitlab.com/garanteka/mongo-service
-  #   volumes:
-  #     - /usr/data/mongo_data:/data/db
-  #   ports:
-  #     - 27017:27017
+  

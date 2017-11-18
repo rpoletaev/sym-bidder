@@ -1,0 +1,135 @@
+{
+    "id": "0F2A3A6BFCB413FB",
+    "imp": [
+        {
+            "id": "1",
+            "banner": {
+                "w": 320,
+                "h": 480,
+                "pos": 1,
+                "btype": [
+                    4
+                ],
+                "battr": [
+                    3,
+                    8,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ]
+            },
+            "video": {
+                "mimes": [
+                    "video/3gpp",
+                    "video/mp4"
+                ],
+                "minduration": 16,
+                "maxduration": 120,
+                "protocols": [
+                    2,
+                    5,
+                    3,
+                    6
+                ],
+                "w": 320,
+                "h": 480,
+                "linearity": 1,
+                "sequence": 1,
+                "battr": [
+                    3,
+                    8,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ],
+                "companiontype": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "displaymanager": "mopub",
+            "displaymanagerver": "4.10.0",
+            "instl": 1,
+            "tagid": "702c60c0dea04583a0fb8c18c6be3c82",
+            "bidfloor": 21.01,
+            "ext": {
+                "brsrclk": 1,
+                "dlp": 1
+            }
+        }
+    ],
+    "app": {
+        "bundle": "com.detectunfollowers",
+        "ver": "2.6.4",
+        "id": "d1251c79abf046fdaace232002074d23",
+        "name": "Unfollowers for Instagram - 28268",
+        "cat": [
+            "IAB1",
+            "IAB9",
+            "IAB9-23",
+            "entertainment",
+            "photography"
+        ],
+        "publisher": {
+            "id": "abef4d8b168e42f28f493c6e00caf6c8",
+            "name": "Appodeal, Inc."
+        }
+    },
+    "device": {
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-G361H Build/LMY48B; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36",
+        "ip": "176.59.193.26",
+        "geo": {
+            "lat": 58.0093,
+            "lon": 56.2841,
+            "accuracy": 500,
+            "ipservice": 3,
+            "country": "RUS",
+            "type": 2,
+            "utcoffset": 300,
+            "ext": {
+                "old_geo": {
+                    "country": "RUS"
+                }
+            }
+        },
+        "carrier": "250-20",
+        "language": "ru",
+        "make": "samsung",
+        "model": "SM-G361H",
+        "os": "Android",
+        "osv": "5.1.1",
+        "js": 1,
+        "connectiontype": 3,
+        "ifa": "0ccda309-5d03-4780-83ae-d1f947c3db6f",
+        "h": 800,
+        "w": 480,
+        "pxratio": 1.5
+    },
+    "user": {
+        "gender": "O"
+    },
+    "at": 2,
+    "cur": [
+        "USD"
+    ],
+    "bcat": [
+        "IAB25",
+        "IAB26",
+        "IAB9-9"
+    ],
+    "badv": [
+        "pleasurewinners.webcam"
+    ],
+    "ext": {
+        "envisionx": {
+            "ssp": 9
+        }
+    }
+}

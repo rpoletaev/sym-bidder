@@ -72,6 +72,7 @@ func (api *Api) inputHandler(w http.ResponseWriter, r *http.Request) {
 
 	bts, err := ioutil.ReadAll(r.Body)
 	r.Body.Close()
+
 	if err != nil {
 		http.Error(w, "wrong body", http.StatusBadRequest)
 		return

@@ -1,0 +1,133 @@
+{
+    "id": "689A180CCFB1B860",
+    "imp": [
+        {
+            "id": "1",
+            "banner": {
+                "w": 480,
+                "h": 320,
+                "pos": 1,
+                "btype": [
+                    4
+                ],
+                "battr": [
+                    3,
+                    8,
+                    9,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ]
+            },
+            "video": {
+                "mimes": [
+                    "video/3gpp",
+                    "video/mp4"
+                ],
+                "maxduration": 120,
+                "protocols": [
+                    2,
+                    5,
+                    3,
+                    6
+                ],
+                "w": 480,
+                "h": 320,
+                "linearity": 1,
+                "sequence": 1,
+                "battr": [
+                    3,
+                    8,
+                    9,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ],
+                "companiontype": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "displaymanager": "mopub",
+            "displaymanagerver": "4.14.0",
+            "instl": 1,
+            "tagid": "496d2f2f507146f8b857827cc29d8f67",
+            "bidfloor": 3.37,
+            "ext": {
+                "brsrclk": 1,
+                "dlp": 1
+            }
+        }
+    ],
+    "app": {
+        "bundle": "com.ohbibi.sup",
+        "ver": "1.4.7",
+        "id": "dc13b8912c294e5a9a77a7ab8bf45e38",
+        "name": "com.ohbibi.sup",
+        "cat": [
+            "IAB9",
+            "IAB9-30",
+            "games"
+        ],
+        "publisher": {
+            "id": "7f657a2bfc6d41c3b73e2e180a05b73f",
+            "name": "Purple Brain - 11"
+        }
+    },
+    "device": {
+        "ua": "Mozilla/5.0 (Linux; Android 7.0; SM-G935F Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.98 Mobile Safari/537.36",
+        "ip": "85.140.1.13",
+        "geo": {
+            "lat": 53.1835,
+            "lon": 50.1182,
+            "accuracy": 500,
+            "ipservice": 3,
+            "country": "RUS",
+            "region": "81",
+            "type": 2,
+            "utcoffset": 240,
+            "ext": {
+                "old_geo": {
+                    "country": "RUS",
+                    "region": "81"
+                }
+            }
+        },
+        "carrier": "250-01",
+        "language": "ru",
+        "make": "samsung",
+        "model": "SM-G935F",
+        "os": "Android",
+        "osv": "7.0.0",
+        "js": 1,
+        "connectiontype": 3,
+        "ifa": "3497b9dc-61f3-4f85-9c72-edd92e3b6537",
+        "h": 1080,
+        "w": 1920,
+        "pxratio": 3
+    },
+    "at": 2,
+    "cur": [
+        "USD"
+    ],
+    "bcat": [
+        "IAB25",
+        "IAB26",
+        "IAB7-39",
+        "IAB8-18",
+        "IAB8-5",
+        "IAB9-9"
+    ],
+    "ext": {
+        "envisionx": {
+            "ssp": 9
+        }
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "id": "84042D3E0463DE2C",
+    "imp": [
+        {
+            "id": "1",
+            "banner": {
+                "w": 320,
+                "h": 480,
+                "pos": 1,
+                "btype": [
+                    4
+                ],
+                "battr": [
+                    3,
+                    8,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ]
+            },
+            "video": {
+                "mimes": [
+                    "video/3gpp",
+                    "video/mp4"
+                ],
+                "minduration": 16,
+                "maxduration": 120,
+                "protocols": [
+                    2,
+                    5,
+                    3,
+                    6
+                ],
+                "w": 320,
+                "h": 480,
+                "linearity": 1,
+                "sequence": 1,
+                "battr": [
+                    3,
+                    8,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ],
+                "companiontype": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "displaymanager": "mopub",
+            "displaymanagerver": "4.7.1",
+            "instl": 1,
+            "tagid": "e404faa3dee5468a8be614834db5cf10",
+            "bidfloor": 1.69,
+            "ext": {
+                "brsrclk": 1,
+                "dlp": 1
+            }
+        }
+    ],
+    "app": {
+        "bundle": "com.games.makewords2",
+        "ver": "4.6.3",
+        "id": "3656adb4157c451a9190fc7b02b92434",
+        "name": "Слова из Слов - 14049",
+        "cat": [
+            "IAB1",
+            "IAB9",
+            "IAB9-30",
+            "entertainment",
+            "games"
+        ],
+        "publisher": {
+            "id": "52fd3ffbec504d0ea9d2c240e0b06069",
+            "name": "Appodeal, Inc."
+        }
+    },
+    "device": {
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; ru-ru; G630-U10 Build/HuaweiG630-U10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "ip": "85.26.164.211",
+        "geo": {
+            "lat": 53.5303,
+            "lon": 49.3461,
+            "accuracy": 200,
+            "ipservice": 3,
+            "country": "RUS",
+            "region": "65",
+            "city": "Samara",
+            "zip": "404146",
+            "type": 2,
+            "utcoffset": 240,
+            "ext": {
+                "old_geo": {
+                    "country": "RUS",
+                    "region": "65",
+                    "city": "Samara",
+                    "zip": "404146"
+                }
+            }
+        },
+        "carrier": "250-02",
+        "language": "ru",
+        "make": "HUAWEI",
+        "model": "G630-U10",
+        "os": "Android",
+        "osv": "4.3.0",
+        "js": 1,
+        "connectiontype": 3,
+        "ifa": "2dd62fe2-4157-4494-96dc-e4e9006ed43b",
+        "h": 720,
+        "w": 1280,
+        "pxratio": 2
+    },
+    "at": 2,
+    "cur": [
+        "USD"
+    ],
+    "bcat": [
+        "IAB25",
+        "IAB26",
+        "IAB9-9"
+    ],
+    "badv": [
+        "badoo.com",
+        "loveeto.ru",
+        "skype.com"
+    ],
+    "ext": {
+        "envisionx": {
+            "ssp": 9
+        }
+    }
+}

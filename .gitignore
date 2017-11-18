@@ -1,0 +1,5 @@
+sym-bidder
+debug
+.vscode/launch.json
+api/debug.test
+results.bin

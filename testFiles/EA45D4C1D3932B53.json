@@ -1,0 +1,117 @@
+{
+    "id": "EA45D4C1D3932B53",
+    "imp": [
+        {
+            "id": "1",
+            "banner": {
+                "w": 320,
+                "h": 480,
+                "pos": 1,
+                "btype": [
+                    4
+                ],
+                "battr": [
+                    3,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    14
+                ],
+                "api": [
+                    3,
+                    5
+                ]
+            },
+            "displaymanager": "mopub",
+            "displaymanagerver": "4.15.0",
+            "instl": 1,
+            "tagid": "fec703e6aabc42d2ac777448f730a06c",
+            "bidfloor": 18.49,
+            "ext": {
+                "brsrclk": 1,
+                "dlp": 1
+            }
+        }
+    ],
+    "app": {
+        "bundle": "com.kooapps.pictowordandroid",
+        "ver": "1.6.1",
+        "id": "81c8f6ef2c9e4bb7bd642193953cbc7a",
+        "name": "Pictoword Android",
+        "cat": [
+            "IAB1",
+            "IAB9",
+            "IAB9-30",
+            "entertainment",
+            "games"
+        ],
+        "publisher": {
+            "id": "bd00cfd6735a4ce3a4ed15720c0c164f",
+            "name": "Kooapps LLC"
+        }
+    },
+    "device": {
+        "ua": "Mozilla/5.0 (Linux; Android 5.1.1; KFFOWI Build/LVY48F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Safari/537.36",
+        "ip": "74.76.48.18",
+        "geo": {
+            "lat": 42.8822,
+            "lon": -73.9916,
+            "accuracy": 10,
+            "ipservice": 3,
+            "country": "USA",
+            "region": "NY",
+            "metro": "532",
+            "city": "Schenectady",
+            "zip": "12302",
+            "type": 2,
+            "utcoffset": -300,
+            "ext": {
+                "old_geo": {
+                    "country": "USA",
+                    "region": "NY",
+                    "metro": "532",
+                    "city": "Schenectady",
+                    "zip": "12302"
+                }
+            }
+        },
+        "language": "en",
+        "make": "Amazon",
+        "model": "KFFOWI",
+        "os": "Android",
+        "osv": "5.1.1",
+        "js": 1,
+        "connectiontype": 2,
+        "ifa": "9fe33be2-7cfe-472c-890b-dfe3df25fa0d",
+        "h": 600,
+        "w": 1024,
+        "pxratio": 1
+    },
+    "at": 2,
+    "cur": [
+        "USD"
+    ],
+    "bcat": [
+        "IAB14-1",
+        "IAB14-2",
+        "IAB14-3",
+        "IAB25",
+        "IAB26",
+        "IAB6-7",
+        "IAB7-28",
+        "IAB7-3",
+        "IAB7-30",
+        "IAB7-39",
+        "IAB8-18",
+        "IAB8-5",
+        "IAB9-9",
+        "IAB3-7"
+    ],
+    "ext": {
+        "envisionx": {
+            "ssp": 9
+        }
+    }
+}

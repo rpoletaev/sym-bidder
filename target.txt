@@ -1,0 +1,7 @@
+POST http://localhost:8080/
+Content-Type: application/json
+@/home/losaped/go/src/github.com/rpoletaev/sym-bidder/testFiles/0F2A3A6BFCB413FB.json
+
+POST http://localhost:8080/
+Content-Type: application/json
+@/home/losaped/go/src/github.com/rpoletaev/sym-bidder/testFiles/2A8238C0140974D2.json
